@@ -3,7 +3,8 @@
 import Link from 'next/link';
 import Avatar from '@mui/material/avatar';
 import { blue } from '@mui/material/colors';
-import Navbar from "../components/Navbar";
+import Navbar from '../components/Navbar';
+import { TextField } from '@mui/material';
 
 const Header = () => {
     return (
@@ -15,7 +16,17 @@ const Header = () => {
                         <Link href="/">CourseShare</Link>
                     </div>
                 </div>
-                <nav>
+                <nav className="flex items-center space-x-4">
+                    <TextField
+                        variant="outlined"
+                        placeholder="Enter your University"
+                        size="small"
+                        sx={{
+                                '& .MuiOutlinedInput-root': {
+                                    borderRadius: '25px', // Adjust the border radius here
+                                },
+                        }}
+                    ></TextField>
                     <Link href="/profile" legacyBehavior>
                         <a>
                             <Avatar sx={{ bgcolor: blue[500] }}>P</Avatar>
