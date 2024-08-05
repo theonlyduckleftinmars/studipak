@@ -1,4 +1,5 @@
-To start project run "npm run start" in frontend directory
+To start project run "npm run start" 
+Run UI testing with "npm run test"
 
 August 3rd, 2024
 Architecture Rough Draft
