@@ -11,32 +11,19 @@ const Header = () => {
         <header className="bg-white shadow-md">
             <div className="container mx-auto px-1 py-4 flex justify-between items-center">
                 <div className="flex items-center space-x-2">
-                    <Navbar />
-                    <div className="text-2xl font-bold text-blue-600 ml-2">
-                        <Link href="/">CourseShare</Link>
+                    <div className="text-3xl font-bold text-blue-500 ml-2">
+                        <Link href="/">StudiPak</Link>
                     </div>
                 </div>
                 <nav className="flex items-center space-x-4">
-                    <TextField
-                        variant="outlined"
-                        placeholder="Enter your University"
-                        size="small"
-                        sx={{
-                                '& .MuiOutlinedInput-root': {
-                                    borderRadius: '25px', // Adjust the border radius here
-                                },
-                        }}
-                    ></TextField>
-                    <Link href="/profile" legacyBehavior>
-                        <a>
-                            <Avatar sx={{ bgcolor: blue[500] }}>P</Avatar>
-                        </a>
-                    </Link>
+                        <div className="font-bold text-black ml-2 space-x-5">
+                    <Link href="/courses">Sign Up</Link>
+                    <Link href="/upload">Log In</Link>
+                        </div>
                 </nav>
             </div>
         </header>
     );
 };
-
 
 export default Header;

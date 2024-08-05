@@ -19,23 +19,17 @@ const Navbar = () => {
                 edge="start"
                 aria-label="menu"
                 onClick={toggleDrawer(true)}
-                sx={{ color: blue[500] }} // Change the color of the IconButton
+                sx={{ color: blue[400] }} // Change the color of the IconButton
             >
                 <MenuIcon />
             </IconButton>
             <Drawer anchor="left" open={drawerOpen} onClose={toggleDrawer(false)}>
-                <List>
-                    <ListItem button component={Link} href="/">
-                        <ListItemText primary="Home" />
+                <List className="cursor-pointer">
+                    <ListItem button component={Link} href="/login">
+                        <ListItemText primary="LogIn" />
                     </ListItem>
-                    <ListItem button component={Link} href="/upload">
-                        <ListItemText primary="Upload" />
-                    </ListItem>
-                    <ListItem button component={Link} href="/courses">
-                        <ListItemText primary="Courses" />
-                    </ListItem>
-                    <ListItem button component={Link} href="/about">
-                        <ListItemText primary="About" />
+                    <ListItem button component={Link} href="/signup">
+                        <ListItemText primary="Sign Up" />
                     </ListItem>
                 </List>
             </Drawer>
