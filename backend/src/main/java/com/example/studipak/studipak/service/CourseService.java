@@ -1,5 +1,6 @@
 package com.example.studipak.studipak.service;
 
+import com.example.studipak.studipak.controller.CourseController;
 import com.example.studipak.studipak.model.Course;
 import com.example.studipak.studipak.repository.CourseRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,8 +11,11 @@ import java.util.List;
 @Service
 public class CourseService {
 
-    @Autowired
-    private CourseRepository courseRepository;
+    private final CourseRepository courseRepository;
+
+    public CourseService(CourseRepository courseRepository) {
+        this.courseRepository = courseRepository;
+    }
 
     public List<Course> getAllCourses() {
         return courseRepository.findAll();
